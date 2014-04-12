@@ -181,8 +181,8 @@ public class AddJsonConstructorVisitor implements TypeVisitor {
                 || CodeGenHelper.isEmbeddable(decl)) {
               writer.writeLine(
                   indent, JsonWritableHelper.class.getName(), ".readCollection(", 
-                  type.toString(), ".class, ", fieldName, 
-                  ", fields.getObject(\"", fieldName, "\"));");
+//                  CodeGenHelper.getClassLiteralName(decl, CodeGenHelper.ClassNameType.QUALIFIED), ", ",
+                      fieldName, ", fields.getObject(\"", fieldName, "\"));");
             }
           }
           

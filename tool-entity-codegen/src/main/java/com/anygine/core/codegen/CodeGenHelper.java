@@ -107,6 +107,11 @@ public class CodeGenHelper {
     return classDefinition;
   }
 
+  static String getClassLiteralName(TypeDeclaration decl, ClassNameType classNameType) {
+    return (classNameType == ClassNameType.QUALIFIED
+            ? decl.getQualifiedName() : decl.getSimpleName()) + ".class";
+  }
+
   static String getClassName(TypeDeclaration decl, GenType classType) {
     return getClassName(decl, classType, ClassNameType.QUALIFIED);
   }

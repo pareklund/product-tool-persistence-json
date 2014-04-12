@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.anygine.product.tool.entity</groupId>
-    <artifactId>product-tool-entity-module</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
+	<parent>
+		<groupId>com.anygine.product.tool.entity</groupId>
+		<artifactId>product-tool-entity-module</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
 	<groupId>com.anygine.product.tool.entity</groupId>
 	<artifactId>tool-entity-codegen</artifactId>
@@ -18,13 +18,13 @@
 	<description>Anygine Entity Codegen Tool</description>
 
 	<dependencies>
-    <dependency>
-      <groupId>com.anygine.common.common</groupId>
-      <artifactId>common-common-entity-base</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <!--  TODO: Move CodeGenModule out of this component to avoid direct
-                dependency on Guice --> 
+		<dependency>
+			<groupId>com.anygine.common.common</groupId>
+			<artifactId>common-common-entity-base</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!-- TODO: Move CodeGenModule out of this component to avoid direct dependency 
+			on Guice -->
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
@@ -35,7 +35,7 @@
 			<version>1.7.0_12</version>
 			<scope>system</scope>
 			<systemPath>${java.home}/../lib/tools.jar</systemPath>
-		</dependency>	
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -43,4 +43,15 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<compilerArgument>-proc:none</compilerArgument>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
