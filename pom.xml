@@ -27,6 +27,7 @@
 
   <modules>
     <module>tool-entity-codegen</module>
+    <module>tool-entity-codegen-old</module>
   </modules>
   
   <!-- TODO: Import definitions below from module-common-pom.xml (or similar) -->

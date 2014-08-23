@@ -1,15 +1,16 @@
 package com.anygine.core.codegen.jsr269;
 
+import static com.anygine.core.codegen.Constants.NEW_LINE;
+
 import java.io.IOException;
 import java.io.Writer;
-
-import static com.anygine.core.codegen.jsr269.Constants.NEW_LINE;
-import static com.anygine.core.codegen.jsr269.Constants.INDENTATION_UNIT;
 
 import javax.annotation.processing.Filer;
 import javax.tools.JavaFileObject;
 
 public class ClassWriterJsr269 {
+
+  static final String INDENTATION_UNIT = "  ";
 
   private final StringBuilder stringBuilder;
   private final Filer filer;
