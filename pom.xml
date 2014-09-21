@@ -20,14 +20,16 @@
   <url>http://maven.apache.org</url>
 
   <scm>
-    <url>git://nasty:8080/git/</url>
-    <connection>scm:git:ssh://admin@nasty/share/git/product-tool-entity.git</connection>
-    <developerConnection>scm:git:ssh://admin@nasty/share/git/product-tool-entity.git</developerConnection>
+    <url>https://github.com/pareklund/product-tool-persistence-json.git</url>
+    <connection>scm:git:git://github.com/pareklund/product-tool-persistence-json.git/</connection>
+    <developerConnection>scm:git:git@github.com:pareklund/product-tool-persistence-json.git</developerConnection>
+    <tag>HEAD</tag>
+  
   </scm>
 
   <modules>
     <module>tool-entity-codegen</module>
-    <module>tool-entity-codegen-old</module>
+    <!-- module>tool-entity-codegen-old</module -->
   </modules>
   
   <!-- TODO: Import definitions below from module-common-pom.xml (or similar) -->
